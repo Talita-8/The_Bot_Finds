@@ -8,7 +8,7 @@ defmodule TheBotFinds.Application do
   def start(_type, _args) do
     children = [
       # Start the Ecto repository
-      TheBotFinds.Repo,
+      # TheBotFinds.Repo,
       # Start the Telemetry supervisor
       TheBotFindsWeb.Telemetry,
       # Start the PubSub system
