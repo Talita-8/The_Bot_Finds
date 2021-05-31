@@ -11,4 +11,12 @@ defmodule TheBotFinds.Find do
       {_, _} -> "erro"
     end
   end
+
+  defp search_item(html, word) do
+    {:ok, body} = Floki.parse_document(html)
+
+    body
+    |> Floki.find("a")
+    |> filter_by_word(word)
+  end
 end
