@@ -30,4 +30,8 @@ defmodule TheBotFinds.Find do
       end
     end)
   end
+
+  defp order(body) do
+    Regex.split(~r/{/, body)
+  end
 end
