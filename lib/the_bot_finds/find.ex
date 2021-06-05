@@ -3,20 +3,17 @@ defmodule TheBotFinds.Find do
 
   def get_topic(topic) do
     Links.site(topic)
+    |> get_html()
+
+    #   |> search_item(word)
   end
 
-  # def find(url, word) do
-  #   url
-  #   |> get_html()
-  #   |> search_item(word)
-  # end
-
-  # defp get_html(url) do
-  #   case Tesla.get(url) do
-  #     {:ok, response} -> response.body
-  #     {_, _} -> "erro"
-  #   end
-  # end
+  defp get_html(url) do
+    case Tesla.get(url) do
+      {:ok, response} -> response.body
+      {_, _} -> "erro"
+    end
+  end
 
   # defp search_item(html, _word) do
   #   {:ok, body} = Floki.parse_document(html)
