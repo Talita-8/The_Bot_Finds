@@ -10,6 +10,15 @@ defmodule TheBotFinds.Links do
         "https://www.bbc.com/portuguese/topics/cz74k717pw5t",
         "https://brasil.elpais.com/brasil/",
         "https://www.terra.com.br/noticias/brasil/"
+      ],
+      politica: [
+        "https://www.terra.com.br/noticias/brasil/politica/",
+        "https://www1.folha.uol.com.br/poder/"
+      ],
+      ciencia: [
+        "https://www.terra.com.br/noticias/ciencia/",
+        "https://www.bbc.com/portuguese/topics/c340q430z4vt",
+        "https://brasil.elpais.com/ciencia/"
       ]
     ]
 
