@@ -4,8 +4,7 @@ defmodule TheBotFinds.Find do
   def get_topic(topic) do
     Links.site(topic)
     |> get_html()
-
-    #   |> search_item(word)
+    |> search_item()
   end
 
   defp get_html(url) do
@@ -15,18 +14,17 @@ defmodule TheBotFinds.Find do
     end
   end
 
-  # defp search_item(html, _word) do
-  #   {:ok, body} = Floki.parse_document(html)
+  defp search_item(html) do
+    {:ok, body} = Floki.parse_document(html)
 
-  #   body
-  #   |> Floki.find(".link-item, a")
+    body
+    |> Floki.find("a")
 
-  # |> Floki.find(".link-item")
-
-  # |> Floki.text()
-  # |> String.split(".")
-  # |> filter_by_word(word)
-  # end
+    # |> Floki.find(".link-item")
+    # |> Floki.text()
+    # |> String.split(".")
+    # |> filter_by_word(word)
+  end
 
   # defp filter_by_word(item, word) do
   #   item
