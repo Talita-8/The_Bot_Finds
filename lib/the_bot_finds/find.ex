@@ -19,23 +19,5 @@ defmodule TheBotFinds.Find do
 
     body
     |> Floki.find("a")
-
-    # |> Floki.find(".link-item")
-    # |> Floki.text()
-    # |> String.split(".")
-    # |> filter_by_word(word)
   end
-
-  # defp filter_by_word(item, word) do
-  #   item
-  #   |> Enum.find(fn x ->
-  #     if String.contains?(x, word) do
-  #       IO.inspect(x)
-  #     end
-  #   end)
-  # end
-
-  # defp order(body) do
-  #   Regex.split(~r/{/, body)
-  # end
 end
