@@ -2,7 +2,7 @@ defmodule TheBotFinds.Find do
   alias TheBotFinds.Links
 
   def get_topic(topic) do
-    Links.site(topic)
+    "https://html.duckduckgo.com/html/?q=#{topic}"
     |> get_html()
     |> search_item()
   end
@@ -18,6 +18,6 @@ defmodule TheBotFinds.Find do
     {:ok, body} = Floki.parse_document(html)
 
     body
-    |> Floki.find("a")
+    |> Floki.find(".result")
   end
 end
